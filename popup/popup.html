@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark Tabs</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><span><img src="/icons/icon.svg" alt="Bookmark"></span> Bookmark Tabs</h1>
+      <p class="subtitle">Instant Bookmark Backup – Just One Click Away!.</p>
+    </header>
+    
+    <div class="folder-input">
+      <label for="folder-name">Folder Name:</label>
+      <input type="text" id="folder-name" placeholder="e.g. Bookmark collection">
+    </div>
+    
+    <div class="tabs-container">
+      <div class="tabs-header">
+        <span class="tab-count">0 tabs selected</span>
+        <button id="select-all" class="select-btn">Select All</button>
+      </div>
+      <div id="tabs-list" class="tabs-list"></div>
+    </div>
+    
+    <div class="action-buttons">
+      <button id="download-all" class="btn primary">Save All Tabs</button>
+      <button id="download-selected" class="btn secondary">Save Selected</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

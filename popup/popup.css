@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  background-color: transparent;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5px;
+}
+
+
+.container {
+  padding: 20px;
+  width: 300px;
+  min-height: 400px;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid black;
+
+}
+
+header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+h1 img {
+  width: 13px;
+}
+
+.subtitle {
+  color: #4f4f4f;
+  font-size: 0.8rem;
+}
+
+/* Folder input */
+.folder-input {
+  margin-bottom: 15px;
+}
+
+.folder-input label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+  /* color: #2c3e50; */
+  color: black;
+}
+
+.folder-input input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: border 0.2s;
+}
+
+.folder-input input:focus {
+  outline: none;
+  border: 2px solid #408EC6;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  transition: border 0.1s;
+}
+
+/* Tabs container */
+.tabs-container {
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.tabs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #f1f3f4;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tab-count {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+}
+
+.select-btn {
+  background: none;
+  border: none;
+  color: #408EC6;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.select-btn:hover {
+  background-color: #408EC6;
+  color: white;
+  transition: color 0.1s;
+  transition: all 1s ease-out;
+}
+
+/* Tabs list */
+.tabs-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.tab-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s;
+}
+
+.tab-item:last-child {
+  border-bottom: none;
+}
+
+.tab-item:hover {
+  background-color: #f5f5f5;
+}
+
+.tab-item input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.tab-item label {
+  flex: 1;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  outline: 0;
+  grid-gap: 8px;
+  align-items: center;
+  /* background-color: #ff90e8; */
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: 8px;
+  justify-content: space-between;
+  line-height: 1.5;
+  overflow: hidden;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: all .14s ease-out;
+  white-space: nowrap;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.btn:hover {
+  box-shadow: 4px 4px 0 #111;
+  transform: translate(-4px, -4px);
+}
+
+.btn:focus-visible {
+  outline-offset: 1px;
+}
+
+
+.btn.primary {
+  background-color: #408EC6;
+  color: white;
+}
+
+.btn.secondary {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Notification styles */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.9rem;
+  opacity: 0;
+  animation: fade-in 0.3s forwards;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.notification.success {
+  background-color: #27ae60;
+}
+
+.notification.error {
+  background-color: #e74c3c;
+}
+
+.notification.fade-out {
+  animation: fade-out 0.5s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    bottom: 0;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 20px;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    bottom: 20px;
+  }
+
+  to {
+    opacity: 0;
+    bottom: 0;
+  }
+}
